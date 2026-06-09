@@ -116,46 +116,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 
 /* ----------------------------------------------------------------
-   Contact formulier
-
-   ================================================================
-   E-MAIL KOPPELING — KIES ÉÉN OPTIE
-
-   OPTIE 1 — Formspree (eenvoudigst, aanbevolen):
-     1. Maak een account op https://formspree.io
-     2. Maak een nieuw formulier aan (gebruik daleboudt.thomas@gmail.com)
-     3. Vervang in index.html de action van het formulier:
-        action="https://formspree.io/f/JOUW_FORM_ID"
-        method="POST"
-     4. Verwijder dan de submit-handler hieronder (of commentarieer hem uit).
-        Formspree verwerkt de redirect/bevestiging zelf.
-
-   OPTIE 2 — EmailJS (geen server nodig, stuurt direct e-mail):
-     1. Maak een account op https://www.emailjs.com
-     2. Maak een e-mailservice + template aan.
-     3. Voeg toe aan index.html boven </body>:
-        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-     4. Vervang de 'TIJDELIJKE HANDLER' hieronder door:
-
-        emailjs.init('JOUW_EMAILJS_PUBLIC_KEY');
-
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            if (!validate()) return;
-            setLoading(true);
-            emailjs.sendForm('JOUW_SERVICE_ID', 'JOUW_TEMPLATE_ID', contactForm)
-                .then(() => showSuccess(), () => showError('Er ging iets mis. Probeer opnieuw.'));
-        });
-
-   OPTIE 3 — Netlify Forms (alleen als je op Netlify host):
-     1. Voeg toe aan <form>: data-netlify="true"
-     2. Voeg toe als eerste child van <form>:
-        <input type="hidden" name="form-name" value="contact">
-     3. Verwijder de handler hieronder — Netlify verwerkt alles.
-     4. Stel het doorstuuradres in via:
-        Netlify dashboard > Forms > jouw formulier > Form notifications
-        E-mailadres: daleboudt.thomas@gmail.com
-   ================================================================
+   Contact formulier — gekoppeld aan Formspree (https://formspree.io/f/meewkprv)
+   Berichten worden doorgestuurd naar daleboudt.thomas@gmail.com
    ---------------------------------------------------------------- */
 
 const contactForm = document.getElementById('contactForm');
@@ -184,20 +146,36 @@ function validate() {
 }
 
 if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
 
         formError.classList.remove('visible');
         if (!validate()) return;
 
-        /* ---- TIJDELIJKE HANDLER ---- */
-        /* Vervang dit blok wanneer je Formspree / EmailJS / Netlify koppelt.
-           Op dit moment toont het alleen een succesbevestiging (geen e-mail verstuurd). */
         setLoading(true);
-        setTimeout(() => {
+
+        try {
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: new FormData(contactForm),
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (response.ok) {
+                showSuccess();
+            } else {
+                const data = await response.json().catch(() => ({}));
+                const msg  = data?.errors?.map(err => err.message).join(', ')
+                             || 'Er ging iets mis. Probeer het opnieuw.';
+                formError.querySelector
+                    ? (formError.lastChild.textContent = msg)
+                    : null;
+                formError.classList.add('visible');
+                setLoading(false);
+            }
+        } catch {
+            formError.classList.add('visible');
             setLoading(false);
-            showSuccess();
-        }, 850);
-        /* ---- EINDE TIJDELIJKE HANDLER ---- */
+        }
     });
 }
