@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DHS — Veilig en praktisch werken met AI</title>
+    <meta name="description" content="DHS helpt organisaties om medewerkers sneller, slimmer en bewuster met AI te laten werken. Binnenkort actief in Groningen.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- =====================================================
+         NAVIGATIE
+         ===================================================== -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">DHS</a>
+            <ul class="nav-links">
+                <li><a href="#over">Over DHS</a></li>
+                <li><a href="#diensten">Wat we doen</a></li>
+                <li><a href="#voor-wie">Voor wie</a></li>
+                <li><a href="#contact" class="nav-cta">Contact</a></li>
+            </ul>
+            <button class="nav-hamburger" id="hamburger" aria-label="Menu openen" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobiel menu -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <ul>
+            <li><a href="#over" class="mobile-link">Over DHS</a></li>
+            <li><a href="#diensten" class="mobile-link">Wat we doen</a></li>
+            <li><a href="#voor-wie" class="mobile-link">Voor wie</a></li>
+            <li><a href="#contact" class="mobile-link">Contact</a></li>
+        </ul>
+    </div>
+
+    <main>
+
+        <!-- =====================================================
+             1. HERO SECTION
+             ===================================================== -->
+        <section class="hero" id="home">
+            <!-- Achtergrond: grid-patroon + glow-effecten via CSS -->
+            <div class="hero-bg" aria-hidden="true">
+                <div class="hero-grid"></div>
+                <div class="hero-glow hero-glow-1"></div>
+                <div class="hero-glow hero-glow-2"></div>
+            </div>
+
+            <div class="container hero-content">
+                <!-- Status-badge -->
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span>Binnenkort actief in Groningen</span>
+                </div>
+
+                <h1 class="hero-headline">
+                    Veilig en praktisch<br>werken met AI.
+                </h1>
+
+                <p class="hero-sub">
+                    DHS helpt organisaties om medewerkers sneller,
+                    slimmer en bewuster met AI te laten werken.
+                </p>
+
+                <a href="#contact" class="btn btn-primary">Neem contact op</a>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             2. OVER DHS
+             ===================================================== -->
+        <section class="section" id="over">
+            <div class="container">
+                <div class="section-label">Over DHS</div>
+
+                <div class="over-grid">
+                    <div class="over-text" data-animate>
+                        <h2 class="section-title">
+                            AI op de werkvloer,<br>zonder de risico's.
+                        </h2>
+                        <p class="body-text">
+                            AI wordt steeds vaker gebruikt op de werkvloer, vaak zonder duidelijke
+                            richtlijnen. DHS ontwikkelt praktische trainingen en programma's waarmee
+                            teams leren hoe zij AI effectief kunnen inzetten, zonder controle, veiligheid
+                            of privacy uit het oog te verliezen.
+                        </p>
+                    </div>
+
+                    <div class="over-stats" data-animate>
+                        <div class="stat-item">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">Kernprogramma's in ontwikkeling</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number">MKB</span>
+                            <span class="stat-label">Focus op lokale bedrijven</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number">GRN</span>
+                            <span class="stat-label">Gevestigd in Groningen</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             3. WAT WE DOEN
+             ===================================================== -->
+        <section class="section section-alt" id="diensten">
+            <div class="container">
+                <div class="section-label">Wat we doen</div>
+                <h2 class="section-title centered" data-animate>
+                    Praktische aanpak,<br>concrete resultaten.
+                </h2>
+
+                <div class="cards-grid">
+
+                    <!-- Card 1: Training -->
+                    <div class="card" data-animate>
+                        <div class="card-icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                                 stroke="currentColor" stroke-width="1.6"
+                                 stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">AI-training voor medewerkers</h3>
+                        <p class="card-text">
+                            Praktische sessies waarin teams leren hoe zij tools zoals ChatGPT
+                            verantwoord gebruiken in hun dagelijkse werk.
+                        </p>
+                    </div>
+
+                    <!-- Card 2: Veiligheid -->
+                    <div class="card" data-animate>
+                        <div class="card-icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                                 stroke="currentColor" stroke-width="1.6"
+                                 stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">Veilig gebruik van AI</h3>
+                        <p class="card-text">
+                            Aandacht voor privacy, bedrijfsinformatie, controle van output
+                            en duidelijke interne richtlijnen.
+                        </p>
+                    </div>
+
+                    <!-- Card 3: Productiviteit -->
+                    <div class="card" data-animate>
+                        <div class="card-icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                                 stroke="currentColor" stroke-width="1.6"
+                                 stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">Productiever werken</h3>
+                        <p class="card-text">
+                            Concrete toepassingen voor e-mails, samenvattingen, klantcommunicatie,
+                            marketing, administratie en interne processen.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             4. VOOR WIE
+             ===================================================== -->
+        <section class="section" id="voor-wie">
+            <div class="container">
+                <div class="section-label">Voor wie</div>
+
+                <div class="voor-wie-grid">
+                    <div data-animate>
+                        <h2 class="section-title">
+                            Gebouwd voor<br>lokale organisaties.
+                        </h2>
+                        <p class="body-text">
+                            DHS richt zich op lokale bedrijven, teams en organisaties die met AI
+                            willen starten, maar behoefte hebben aan structuur, duidelijkheid
+                            en praktische begeleiding.
+                        </p>
+                        <div class="tags" role="list" aria-label="Doelgroepen">
+                            <span class="tag" role="listitem">MKB</span>
+                            <span class="tag" role="listitem">Zakelijke dienstverlening</span>
+                            <span class="tag" role="listitem">Recruitment</span>
+                            <span class="tag" role="listitem">Marketing</span>
+                            <span class="tag" role="listitem">Administratie</span>
+                            <span class="tag" role="listitem">Projectteams</span>
+                        </div>
+                    </div>
+
+                    <!-- Abstracte visuele dot-grid (gegenereerd via JS) -->
+                    <div class="voor-wie-visual" aria-hidden="true">
+                        <div class="dot-grid" id="dotGrid"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             5. COMING SOON / PILOT
+             ===================================================== -->
+        <section class="section pilot-section" id="pilot">
+            <div class="pilot-bg" aria-hidden="true">
+                <div class="pilot-glow"></div>
+                <div class="pilot-grid"></div>
+            </div>
+
+            <div class="container pilot-content">
+                <div class="section-label accent-light">In ontwikkeling</div>
+                <h2 class="section-title centered text-light" data-animate>
+                    Wij bouwen momenteel aan<br>onze eerste AI-programma's.
+                </h2>
+                <p class="body-text centered text-light" data-animate>
+                    DHS zoekt geselecteerde organisaties in Groningen en omgeving die willen
+                    ontdekken hoe AI op een veilige en concrete manier waarde kan toevoegen
+                    aan hun team.
+                </p>
+                <a href="#contact" class="btn btn-outline" data-animate>Plan een kennismaking</a>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             6. CONTACT
+             ===================================================== -->
+        <section class="section" id="contact">
+            <div class="container">
+                <div class="section-label">Contact</div>
+
+                <div class="contact-grid">
+                    <!-- Linker kolom: info -->
+                    <div class="contact-info" data-animate>
+                        <h2 class="section-title">Laten we<br>kennismaken.</h2>
+                        <p class="body-text">
+                            Heb je een vraag of wil je meer weten over onze aanpak?
+                            Vul het formulier in en we nemen zo snel mogelijk contact
+                            met je op.
+                        </p>
+                        <div class="contact-detail">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                 stroke="currentColor" stroke-width="1.6"
+                                 stroke-linecap="round" stroke-linejoin="round"
+                                 aria-hidden="true">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            <span>Groningen, Nederland</span>
+                        </div>
+                    </div>
+
+                    <!-- Rechter kolom: formulier -->
+                    <div class="contact-form-wrapper" data-animate>
+
+                        <!--
+                        ================================================================
+                        FORMULIER KOPPELING — KIES ÉÉN VAN DE DRIE OPTIES
+
+                        OPTIE 1 — Formspree (aanbevolen, gratis tot 50 msg/maand):
+                          1. Ga naar https://formspree.io en maak een account aan.
+                          2. Maak een nieuw formulier aan voor jouw e-mail.
+                          3. Voeg toe aan <form>:
+                               action="https://formspree.io/f/JOUW_FORM_ID"
+                               method="POST"
+                          4. Verwijder de submit-handler in script.js (zie aanwijzing daar).
+
+                        OPTIE 2 — Netlify Forms (als je op Netlify host):
+                          1. Voeg toe aan <form>: data-netlify="true"
+                          2. Voeg toe in <form>:
+                             <input type="hidden" name="form-name" value="contact">
+                          3. Stel in Netlify dashboard > Forms > Notifications
+                             het doorstuuradres in: daleboudt.thomas@gmail.com
+
+                        OPTIE 3 — EmailJS (stuurt direct vanuit browser):
+                          Zie de aanwijzingen in script.js.
+                        ================================================================
+                        -->
+                        <form class="contact-form" id="contactForm"
+                              action="#" method="POST"
+                              novalidate>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="naam">Naam</label>
+                                    <input type="text" id="naam" name="naam"
+                                           placeholder="Je naam" required autocomplete="name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="bedrijf">Bedrijf</label>
+                                    <input type="text" id="bedrijf" name="bedrijf"
+                                           placeholder="Bedrijfsnaam" autocomplete="organization">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">E-mail</label>
+                                <input type="email" id="email" name="email"
+                                       placeholder="jouw@emailadres.nl" required autocomplete="email">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="bericht">Bericht</label>
+                                <textarea id="bericht" name="bericht" rows="5"
+                                          placeholder="Vertel ons over je organisatie en wat je zoekt..."
+                                          required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+                                Verstuur bericht
+                            </button>
+
+                            <!-- Foutmelding -->
+                            <div class="form-message form-error" id="formError" role="alert" aria-live="polite">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                     stroke="currentColor" stroke-width="2"
+                                     stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <line x1="12" y1="8" x2="12" y2="12"/>
+                                    <line x1="12" y1="16" x2="12.01" y2="16"/>
+                                </svg>
+                                Vul alle verplichte velden in.
+                            </div>
+
+                            <!-- Succesmelding -->
+                            <div class="form-message form-success" id="formSuccess" role="status" aria-live="polite">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                     stroke="currentColor" stroke-width="2"
+                                     stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22 4 12 14.01 9 11.01"/>
+                                </svg>
+                                Bedankt. We nemen spoedig contact met je op.
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <span class="footer-logo">DHS</span>
+            <p class="footer-tagline">Veilig en praktisch werken met AI.</p>
+            <p class="footer-copy">&copy; 2025 DHS. Alle rechten voorbehouden.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
